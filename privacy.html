@@ -7,14 +7,18 @@
 <meta name="description" content="Privacy Policy for the Mind Memory app by WIAWIN. All data is stored locally on the user's device.">
 <link rel="icon" href="logo3.png">
 <style>
-  :root { --bg:#f7f8f6; --surface:#fff; --text:#1d2420; --muted:#55605a; --accent:#2f5d50; --line:#dfe4e0; --note-bg:#eaf2ee; }
+  :root { --bg:#ece7d6; --surface:#f6f2e4; --text:#26261f; --muted:#5a5a4c; --accent:#2f5d50; --line:#d3ccb2; --note-bg:#dfe7d3; }
   @media (prefers-color-scheme: dark) {
     :root { --bg:#121715; --surface:#1a211e; --text:#e6ece8; --muted:#a2aea7; --accent:#7fc4ae; --line:#2c3631; --note-bg:#20302a; }
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin:0; background:var(--bg); color:var(--text); font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.7; }
-  main { max-width:44rem; margin:0 auto; padding:1.5rem 1.25rem 4rem; }
+  .frame { position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:1px solid var(--line); box-shadow:0 2px 8px rgba(0,0,0,.06); }
+  .frame .topbar, .frame h1 { max-width:44rem; margin-left:auto; margin-right:auto; padding-left:1.25rem; padding-right:1.25rem; }
+  .frame .topbar { padding-top:.75rem; }
+  .frame h1 { margin-top:.4rem; margin-bottom:0; padding-bottom:.7rem; font-size:1.6rem; }
+  main { max-width:44rem; margin:0 auto; padding:1.25rem 1.25rem 4rem; }
   .topbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
   .brand { display:flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--text); font-weight:700; letter-spacing:.06em; }
   .brand img { width:40px; height:40px; object-fit:contain; }
@@ -22,7 +26,7 @@
   .lang button { background:transparent; color:var(--muted); border:0; padding:.35rem .9rem; font:inherit; font-size:.9rem; cursor:pointer; }
   .lang button[aria-pressed="true"] { background:var(--accent); color:var(--bg); }
   .lang button:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
-  h1 { font-size:1.9rem; line-height:1.25; margin:2rem 0 .4rem; }
+  h1 { line-height:1.25; }
   h2 { font-size:1.2rem; margin:2.2rem 0 .6rem; color:var(--accent); }
   p, li { max-width:65ch; }
   .meta { color:var(--muted); margin:0 0 1.5rem; }
@@ -40,7 +44,7 @@
 </style>
 </head>
 <body>
-<main>
+<header class="frame">
   <div class="topbar">
     <a class="brand plink" href="index.html"><img src="logo3.png" alt="WIAWIN logo" width="40" height="40"><span>WIAWIN</span></a>
     <div class="lang" role="group" aria-label="Language / Bahasa">
@@ -50,9 +54,11 @@
   </div>
 
   <h1><span data-l="en">Privacy Policy</span><span data-l="id">Kebijakan Privasi</span></h1>
+</header>
+<main>
   <p class="meta">
-    <span data-l="en">App: <strong>Mind Memory</strong> · Developer: <strong>Herry Santoso (WIAWIN)</strong><br>Last updated: <strong>12 November 2026</strong></span>
-    <span data-l="id">Aplikasi: <strong>Mind Memory</strong> · Pengembang: <strong>Herry Santoso (WIAWIN)</strong><br>Terakhir diperbarui: <strong>12 November 2026</strong></span>
+    <span data-l="en">App: <strong>Mind Memory</strong> · Developer: <strong>WIAWIN</strong><br>Last updated: <strong>12 November 2026</strong></span>
+    <span data-l="id">Aplikasi: <strong>Mind Memory</strong> · Pengembang: <strong>WIAWIN</strong><br>Terakhir diperbarui: <strong>12 November 2026</strong></span>
   </p>
 
   <div class="summary">
@@ -70,6 +76,8 @@
     <ul>
       <li>Notes, diary entries, or text you enter;</li>
       <li>Drawings or sketches you make on the touch screen;</li>
+      <li>Photos, videos, and audio files you choose to upload as part of your chosen memory methods;</li>
+      <li>Reminder times you set for notifications;</li>
       <li>App settings (for example theme or display preferences).</li>
     </ul>
     <p>All of this data is stored in the internal storage of your Android device and is not sent to any server.</p>
@@ -79,6 +87,8 @@
     <ul>
       <li>Catatan, tulisan, atau entri yang Anda masukkan;</li>
       <li>Gambar atau coretan yang Anda buat di layar sentuh;</li>
+      <li>Foto, video, dan suara yang Anda pilih untuk diunggah sebagai bagian dari metode mengingat pilihan Anda;</li>
+      <li>Waktu pengingat yang Anda tentukan untuk notifikasi;</li>
       <li>Pengaturan aplikasi (misalnya tema atau preferensi tampilan).</li>
     </ul>
     <p>Seluruh data tersebut disimpan di penyimpanan internal perangkat Android Anda dan tidak dikirim ke server mana pun.</p>
@@ -88,14 +98,14 @@
   <ul data-l="en">
     <li>No account registration or login;</li>
     <li>We do not collect name, email, phone number, or any personal identity;</li>
-    <li>We do not collect location, contacts, camera, microphone, or device data;</li>
+    <li>We do not collect location, contacts, or device identifiers;</li>
     <li>No analytics, behavior tracking, or advertising;</li>
     <li>No third-party SDKs that collect user data.</li>
   </ul>
   <ul data-l="id">
     <li>Tidak ada pendaftaran akun atau login;</li>
     <li>Tidak mengumpulkan nama, email, nomor telepon, atau identitas pribadi;</li>
-    <li>Tidak mengumpulkan lokasi, kontak, kamera, mikrofon, atau data perangkat;</li>
+    <li>Tidak mengumpulkan lokasi, kontak, atau pengenal perangkat;</li>
     <li>Tidak ada analitik, pelacakan perilaku, atau iklan;</li>
     <li>Tidak ada SDK pihak ketiga yang mengumpulkan data pengguna.</li>
   </ul>
@@ -109,20 +119,22 @@
     <table>
       <thead><tr><th>Permission</th><th>Use</th></tr></thead>
       <tbody>
-        <tr><td>Internet</td><td>Not used to send user data. <em>(Remove this row if the app does not request internet permission.)</em></td></tr>
-        <tr><td>Storage / Media</td><td>Only if you choose to export or back up your data manually. <em>(Remove if there is no such feature.)</em></td></tr>
+        <tr><td>Notifications</td><td>Needed so the App can show reminders at the times you set. Notifications are scheduled and shown on your device only.</td></tr>
+        <tr><td>Media access (photos, videos, audio)</td><td>Used only so you can pick and upload photos, videos, and audio files as part of your chosen memory methods. These files stay on your device and are never sent to us or to any server.</td></tr>
       </tbody>
     </table>
   </div>
+  <p data-l="en">You can turn off any permission at any time in <em>Android Settings → Apps → Mind Memory → Permissions</em>. Some features may not work without them.</p>
   <div class="table-wrap" data-l="id">
     <table>
       <thead><tr><th>Izin</th><th>Penggunaan</th></tr></thead>
       <tbody>
-        <tr><td>Internet</td><td>Tidak digunakan untuk mengirim data pengguna. <em>(Hapus baris ini jika aplikasi tidak meminta izin internet.)</em></td></tr>
-        <tr><td>Penyimpanan / Media</td><td>Hanya jika Anda memilih mengekspor atau mencadangkan data secara manual. <em>(Hapus jika tidak ada fitur ini.)</em></td></tr>
+        <tr><td>Notifikasi</td><td>Diperlukan agar Aplikasi dapat menampilkan pengingat sesuai waktu yang Anda tentukan. Notifikasi dijadwalkan dan ditampilkan hanya di perangkat Anda.</td></tr>
+        <tr><td>Akses media (foto, video, suara)</td><td>Hanya digunakan agar Anda dapat memilih dan mengunggah foto, video, dan suara sebagai bagian dari metode mengingat pilihan Anda. File tetap berada di perangkat Anda dan tidak pernah dikirim kepada kami atau ke server mana pun.</td></tr>
       </tbody>
     </table>
   </div>
+  <p data-l="id">Anda dapat mematikan izin kapan saja di <em>Pengaturan Android → Aplikasi → Mind Memory → Izin</em>. Beberapa fitur mungkin tidak berfungsi tanpa izin tersebut.</p>
 
   <h2 data-l="en">6. Data Storage and Security</h2><h2 data-l="id">6. Penyimpanan dan Keamanan Data</h2>
   <p data-l="en">Data is stored in the app's private storage on your device and protected by Android's security system (app isolation and your device screen lock). Data security also depends on your device, so we recommend using a screen lock.</p>
@@ -160,7 +172,7 @@
   <p data-l="en">If you have questions about this Privacy Policy, contact:<br>Email: <a href="mailto:herryx@gmail.com">herryx@gmail.com</a><br>Website: <a href="https://www.wiawin.site">https://www.wiawin.site</a></p>
   <p data-l="id">Jika ada pertanyaan tentang Kebijakan Privasi ini, hubungi:<br>Email: <a href="mailto:herryx@gmail.com">herryx@gmail.com</a><br>Website: <a href="https://www.wiawin.site">https://www.wiawin.site</a></p>
 
-  <footer>© 2026 WIAWIN. <span data-l="en">All rights reserved.</span><span data-l="id">Semua hak dilindungi.</span></footer>
+  <footer>© 2026 WIAWIN · www.wiawin.site<br><span data-l="en">All rights reserved.</span><span data-l="id">Semua hak dilindungi.</span></footer>
 </main>
 <script>
 (function () {

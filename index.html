@@ -5,24 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WIAWIN – Creating Opportunities, Connecting Business</title>
 <meta name="description" content="WIAWIN – Creating Opportunities, Connecting Business. Android app developer. Mind Memory app, contact and privacy policy.">
-<link rel="icon" href="logo3.png">
+<link rel="icon" type="image/webp" href="gambar/logo.webp">
 <style>
-  :root { --bg:#ece7d6; --surface:#f6f2e4; --text:#26261f; --muted:#5a5a4c; --accent:#2f5d50; --line:#d3ccb2; --gold:#8b5e1a; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#121715; --surface:#1a211e; --text:#e6ece8; --muted:#a2aea7; --accent:#7fc4ae; --line:#2c3631; --gold:#d9a441; }
-  }
+  /* Latar sama dengan latar logo (#F6EDD6) */
+  :root { --bg:#f6edd6; --surface:#fbf7ea; --text:#26261f; --muted:#5f5a45; --accent:#2f5d50; --line:#ddd1b3; --gold:#8b5e1a; }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--text); font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.7; }
-  main { max-width:42rem; margin:0 auto; padding:1.5rem 1.25rem 4rem; }
-  .topbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
+  main { max-width:42rem; margin:0 auto; padding:1rem 1.25rem 4rem; }
+  .topbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+  .logo { display:block; width:72px; height:72px; object-fit:contain; }
   .lang { display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; }
   .lang button { background:transparent; color:var(--muted); border:0; padding:.35rem .9rem; font:inherit; font-size:.9rem; cursor:pointer; }
   .lang button[aria-pressed="true"] { background:var(--accent); color:var(--bg); }
   .lang button:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
-  header { text-align:center; padding:2.5rem 0 1rem; }
-  header img { width:112px; height:112px; object-fit:contain; }
-  h1 { font-size:2.4rem; letter-spacing:.06em; margin:.6rem 0 .2rem; color:var(--gold); }
-  .motto { color:var(--muted); font-size:1.1rem; font-style:italic; margin:0 0 1rem; }
+  header { padding:1.5rem 0 .5rem; }
+  h1 { font-size:2.4rem; letter-spacing:.06em; margin:0 0 .2rem; color:var(--gold); line-height:1.2; }
+  .motto { color:var(--muted); font-size:1.1rem; font-style:italic; margin:0; }
   h2 { font-size:1.2rem; margin:2.2rem 0 .6rem; color:var(--accent); }
   p { max-width:65ch; margin:.4rem 0; }
   dl { margin:0; background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:.5rem 1.1rem; }
@@ -40,7 +38,7 @@
 <body>
 <main>
   <div class="topbar">
-    <span></span>
+    <img class="logo" src="gambar/logo.webp" alt="WIAWIN logo" width="72" height="72">
     <div class="lang" role="group" aria-label="Language / Bahasa">
       <button type="button" data-set="en" aria-pressed="true">English</button>
       <button type="button" data-set="id" aria-pressed="false">Indonesia</button>
@@ -48,7 +46,6 @@
   </div>
 
   <header>
-    <img src="logo3.png" alt="WIAWIN logo" width="112" height="112">
     <h1>WIAWIN</h1>
     <p class="motto">Creating Opportunities, Connecting Business</p>
   </header>
@@ -56,9 +53,9 @@
   <h2><span data-l="en">Application</span><span data-l="id">Aplikasi</span></h2>
   <div class="app">
     <h3>Mind Memory</h3>
-    <p data-l="en">An app to improve human memory, based on memory research dating back to the 1800s. With this app, we can train our memory like a genius. It is for all ages: students, university students, employees, entrepreneurs, parents, and even young children. Become smarter with Mind Memory.</p>
-    <p data-l="id">Aplikasi untuk meningkatkan ingatan manusia sesuai riset sejak tahun 1800-an. Dengan aplikasi ini kita dapat meningkatkan ingatan seperti orang jenius. Aplikasi ini bisa untuk semua umur: pelajar, mahasiswa, karyawan, pengusaha, orang tua, bahkan anak kecil pun bisa. Jadilah pintar bersama Mind Memory.</p>
-    <p><a class="plink" href="privacy.html"><span data-l="en">Read the Mind Memory Privacy Policy</span><span data-l="id">Baca Kebijakan Privasi Mind Memory</span></a></p>
+    <p data-l="en">An app to improve human memory, based on memory research dating back to the 1800s. With this app, we can train our memory like a genius. It is for students, university students, employees, entrepreneurs, and parents. Become smarter with Mind Memory.</p>
+    <p data-l="id">Aplikasi untuk meningkatkan ingatan manusia sesuai riset sejak tahun 1800-an. Dengan aplikasi ini kita dapat meningkatkan ingatan seperti orang jenius. Aplikasi ini cocok untuk pelajar, mahasiswa, karyawan, pengusaha, dan orang tua. Jadilah pintar bersama Mind Memory.</p>
+    <p><a class="plink" href="mindmemory.html"><span data-l="en">Read the Mind Memory Privacy Policy</span><span data-l="id">Baca Kebijakan Privasi Mind Memory</span></a></p>
   </div>
 
   <h2><span data-l="en">Contact</span><span data-l="id">Kontak</span></h2>
@@ -79,7 +76,7 @@
     document.querySelectorAll(".lang button").forEach(function (b) {
       b.setAttribute("aria-pressed", b.getAttribute("data-set") === l ? "true" : "false");
     });
-    document.querySelectorAll("a.plink").forEach(function (a) { a.href = "privacy.html#" + l; });
+    document.querySelectorAll("a.plink").forEach(function (a) { a.href = "mindmemory.html#" + l; });
     if (save) { try { localStorage.setItem("lang", l); } catch (e) {} }
   }
   var start = "en", h = location.hash.replace("#", "");
